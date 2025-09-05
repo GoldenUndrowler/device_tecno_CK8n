@@ -46,144 +46,583 @@
         "900000",
         "850000",
         "774000",
-        "500000",
-        "0"
+        "500000"
       ],
+      "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "CPUBigClusterMaxFreq",
-      "Path": "/sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq",
+      "Path": "/sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq",
       "Values": [
         "9999999",
-        "2200000",
-        "2000000",
-        "1950000",
-        "1900000",
-        "1850000",
-        "1800000",
-        "1710000",
-        "1621000",
-        "1532000",
-        "1443000",
-        "1354000",
-        "1295000",
-        "1176000",
-        "1087000",
-        "998000",
-        "909000",
-        "850000"
+        "3000000",
+        "2892000",
+        "2713000",
+        "2600000",
+        "2463000",
+        "2284000",
+        "2141000",
+        "1998000",
+        "1820000",
+        "1632000",
+        "1482000",
+        "1370000",
+        "1258000",
+        "1108000",
+        "921000",
+        "659000"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "CPUBigClusterMinFreq",
-      "Path": "/sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq",
+      "Path": "/sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq",
       "Values": [
-        "2200000",
-        "2000000",
-        "1950000",
-        "1900000",
-        "1850000",
-        "1800000",
-        "1710000",
-        "1621000",
-        "1532000",
-        "1443000",
-        "1354000",
-        "1295000",
-        "1176000",
-        "1087000",
-        "998000",
-        "909000",
-        "850000",
-        "0"
+        "3000000",
+        "2892000",
+        "2713000",
+        "2600000",
+        "2463000",
+        "2284000",
+        "2141000",
+        "1998000",
+        "1820000",
+        "1632000",
+        "1482000",
+        "1370000",
+        "1258000",
+        "1108000",
+        "921000",
+        "659000"
       ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "GPUSchedMode",
-      "Path": "/sys/devices/platform/soc/13000000.mali/js_ctx_scheduling_mode",
-      "Values": ["0", "1"],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
-      "Name": "GPUSchedPeriod",
-      "Path": "/sys/devices/platform/soc/13000000.mali/js_scheduling_period",
-      "Values": ["100", "75", "50", "0"],
-      "ResetOnInit": true,
-      "DefaultIndex": 0
-    },
-    {
-      "Name": "GPUDVFSInterval",
-      "Path": "/sys/devices/platform/soc/13000000.mali/dvfs_period",
-      "Values": ["100", "75", "50"],
-      "ResetOnInit": true,
-      "DefaultIndex": 0
-    },
-    {
-      "Name": "GPUBlockBoost",
-      "Path": "/sys/kernel/ged/hal/gpu_boost_level",
-      "Values": ["101", "50", "0", "-1"],
-      "ResetOnInit": true,
-      "DefaultIndex": 2
-    },
-    {
-      "Name": "BGUclampMin",
-      "Path": "/dev/cpuctl/background/cpu.uclamp.min",
-      "Values": ["100", "75", "50", "25", "0"],
+      "Name": "GPUBigClusterMaxFreq",
+      "Path": "/sys/class/devfreq/soc:qcom,kgsl-devfreq/max_freq",
+      "Values": [
+        "9999999",
+        "9999999"
+      ],
+      "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
-      "Name": "FGUclampMin",
-      "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
-      "Values": ["100", "75", "50", "25", "0"],
+      "Name": "GPUBigClusterMinFreq",
+      "Path": "/sys/class/devfreq/soc:qcom,kgsl-devfreq/min_freq",
+      "Values": [
+        "9999999",
+        "9999999"
+      ],
+      "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
-      "Name": "TAUclampMin",
-      "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
-      "Values": ["100", "75", "50", "25", "0"],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CAMUClampBoost",
-      "Path": "/dev/cpuctl/camera-daemon/cpu.uclamp.min",
-      "Values": ["100", "75", "50", "25", "0"],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "FBTBoostTA",
-      "Path": "/sys/kernel/fpsgo/fbt/boost_ta",
-      "Values": ["0", "1"],
-      "ResetOnInit": true,
-      "DefaultIndex": 0
-    },
-    {
-      "Name": "FBTBHROPP",
-      "Path": "/sys/module/mtk_fpsgo/parameters/bhr_opp",
-      "Values": ["1", "3", "6", "9", "12", "15", "31"],
-      "ResetOnInit": true,
-      "DefaultIndex": 0
-    },
-    {
-      "Name": "PowerHALMainState",
-      "Path": "vendor.powerhal.state",
-      "Values": ["SUSTAINED_PERFORMANCE", ""],
+      "Name": "gpu.active",
+      "Values": [
+        "0.1",
+        "0.2",
+        "0.3",
+        "0.4",
+        "0.5",
+        "0.6",
+        "0.7",
+        "0.8",
+        "0.9",
+        "1.0"
+      ],
       "Type": "Property"
     },
     {
-      "Name": "PowerHALAudioState",
-      "Path": "vendor.powerhal.audio",
-      "Values": ["AUDIO_STREAMING_LOW_LATENCY", ""],
+      "Name": "ambient.on",
+      "Values": [
+        "0.1"
+      ],
       "Type": "Property"
     },
     {
-      "Name": "PowerHALRenderingState",
-      "Path": "vendor.powerhal.rendering",
-      "Values": ["EXPENSIVE_RENDERING", ""],
+      "Name": "screen.on",
+      "Values": [
+        "99.99"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "screen.full",
+      "Values": [
+        "416.98"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "bluetooth.active",
+      "Values": [
+        "17.04"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "bluetooth.on",
+      "Values": [
+        "0.45"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "wifi.on",
+      "Values": [
+        "0.1"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "wifi.active",
+      "Values": [
+        "294.94"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "wifi.scan",
+      "Values": [
+        "54.35"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "audio",
+      "Values": [
+        "24.47"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "video",
+      "Values": [
+        "96.78"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "camera.flashlight",
+      "Values": [
+        "441.56"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "camera.avg",
+      "Values": [
+        "608.13"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "gps.on",
+      "Values": [
+        "35.68"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "radio.active",
+      "Values": [
+        "15"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "radio.scanning",
+      "Values": [
+        "37.9"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "radio.on",
+      "Values": [
+        "2.88",
+        "2.88"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "cpu.clusters.cores",
+      "Values": [
+        "4",
+        "3",
+        "1"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "cpu.core_speeds.cluster0",
+      "Values": [
+        "500000",
+        "600000",
+        "675000",
+        "750000",
+        "850000",
+        "925000",
+        "1000000",
+        "1075000",
+        "1250000",
+        "1350000",
+        "1450000",
+        "1525000",
+        "1625000",
+        "1725000",
+        "1800000",
+        "2000000"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "cpu.core_speeds.cluster1",
+      "Values": [
+        "437000",
+        "700000",
+        "902000",
+        "1046000",
+        "1162000",
+        "1335000",
+        "1451000",
+        "1537000",
+        "1624000",
+        "1740000",
+        "1855000",
+        "1985000",
+        "2200000",
+        "2354000",
+        "2507000",
+        "2600000"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "cpu.core_speeds.cluster2",
+      "Values": [
+        "659000",
+        "921000",
+        "1108000",
+        "1258000",
+        "1370000",
+        "1482000",
+        "1632000",
+        "1820000",
+        "1998000",
+        "2141000",
+        "2284000",
+        "2463000",
+        "2600000",
+        "2713000",
+        "2892000",
+        "3000000"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "cpu.core_power.cluster0",
+      "Values": [
+        "5.63",
+        "6.10",
+        "7.03",
+        "7.77",
+        "9.33",
+        "10.51",
+        "11.36",
+        "12.78",
+        "15.76",
+        "17.50",
+        "18.84",
+        "20.16",
+        "22.77",
+        "25.75",
+        "27.04",
+        "37.16"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "cpu.core_power.cluster1",
+      "Values": [
+        "23.86",
+        "34.95",
+        "50.34",
+        "62.55",
+        "70.37",
+        "75.06",
+        "75.70",
+        "79.35",
+        "83.14",
+        "87.43",
+        "106.34",
+        "130.90",
+        "154.60",
+        "181.96",
+        "215.01",
+        "222.43"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "cpu.core_power.cluster2",
+      "Values": [
+        "45.69",
+        "67.57",
+        "84.06",
+        "100.03",
+        "115.30",
+        "128.90",
+        "150.16",
+        "178.99",
+        "207.86",
+        "229.60",
+        "265.32",
+        "288.78",
+        "311.81",
+        "324.79",
+        "348.91",
+        "370.13"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "cpu.idle",
+      "Values": [
+        "6.7"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "cpu.suspend",
+      "Values": [
+        "5"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "cpu.active",
+      "Values": [
+        "9.89"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "cpu.cluster_power.cluster0",
+      "Values": [
+        "2.11"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "cpu.cluster_power.cluster1",
+      "Values": [
+        "2.22"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "cpu.speeds.cluster0",
+      "Values": [
+        "500000",
+        "650000",
+        "740000",
+        "900000",
+        "980000",
+        "1053000",
+        "1150000",
+        "1260000",
+        "1310000",
+        "1407000",
+        "1503000",
+        "1600000",
+        "1703000",
+        "1800000",
+        "1903000",
+        "2000000"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "cpu.speeds.cluster1",
+      "Values": [
+        "774000",
+        "835000",
+        "919000",
+        "1002000",
+        "1085000",
+        "1169000",
+        "1308000",
+        "1419000",
+        "1530000",
+        "1670000",
+        "1733000",
+        "1796000",
+        "1860000",
+        "1923000",
+        "1986000",
+        "2050000"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "cpu.active.cluster0",
+      "Values": [
+        "6.76",
+        "9.47",
+        "11.18",
+        "12.95",
+        "15.27",
+        "18.73",
+        "22.00",
+        "25.15",
+        "30.29",
+        "35.78",
+        "38.37",
+        "41.35",
+        "45.00",
+        "49.04",
+        "53.58",
+        "55.65"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "cpu.active.cluster1",
+      "Values": [
+        "34.42",
+        "36.76",
+        "42.69",
+        "49.41",
+        "56.50",
+        "69.44",
+        "80.24",
+        "107.99",
+        "129.97",
+        "156.56",
+        "168.90",
+        "176.07",
+        "178.23",
+        "200.59",
+        "203.88",
+        "210.66"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "memory.bandwidths",
+      "Values": [
+        "22.7"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "battery.capacity",
+      "Values": [
+        "5000"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "wifi.controller.idle",
+      "Values": [
+        "15.2"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "wifi.controller.rx",
+      "Values": [
+        "296.22"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "wifi.controller.tx",
+      "Values": [
+        "426.91"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "wifi.controller.tx_levels",
+      "Values": [],
+      "Type": "Property"
+    },
+    {
+      "Name": "wifi.controller.voltage",
+      "Values": [
+        "4.0"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "wifi.batchedscan",
+      "Values": [
+        "30.7",
+        "30.7",
+        "30.7",
+        "30.7",
+        "30.7"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "modem.controller.sleep",
+      "Values": [
+        "0"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "modem.controller.idle",
+      "Values": [
+        "96.36"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "modem.controller.rx",
+      "Values": [
+        "676.3"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "modem.controller.tx",
+      "Values": [
+        "676.3",
+        "430.7",
+        "157.3",
+        "111.2",
+        "106.4"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "modem.controller.voltage",
+      "Values": [
+        "0"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "gps.signalqualitybased",
+      "Values": [
+        "0",
+        "0"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "gps.voltage",
+      "Values": [
+        "0"
+      ],
       "Type": "Property"
     }
   ],
