@@ -147,7 +147,7 @@ PRODUCT_PACKAGES += \
     libvulkan
 
 # Dolby
-$(call inherit-product, vendor/sony/dolby/setup.mk)
+# $(call inherit-product, vendor/sony/dolby/setup.mk)
 
 # DRM
 PRODUCT_PACKAGES += \
